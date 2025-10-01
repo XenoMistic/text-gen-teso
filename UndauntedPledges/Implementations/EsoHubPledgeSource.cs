@@ -82,7 +82,7 @@ public class EsoHubPledgeSource : IPledgeSource
             var cellNumber = 0;
             var pledge = new DailyPledge
             {
-                DateTime = DateTimeOffset.UtcNow.AddHours(3).DateTime
+                DateTime = DateTimeOffset.UtcNow.AddHours(-3).DateTime
             };
 
             foreach (var cell in cells)
@@ -144,7 +144,7 @@ public class EsoHubPledgeSource : IPledgeSource
             switch (cellNumber)
             {
                 case 0:
-                    pledge.DateTime = DateTimeOffset.UtcNow.AddHours(3).DateTime.AddDays(rowNumber);
+                    pledge.DateTime = DateTimeOffset.UtcNow.AddHours(-3).DateTime.AddDays(rowNumber);
                     break;
 
                 case 1:
